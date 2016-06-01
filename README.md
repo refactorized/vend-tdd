@@ -1,4 +1,14 @@
-#Vending Machine Exercise
+#Vending Machine TDD Exercise
+
+## Running tests
+To run against vend-test.js run `mocha` but you can specify any test file by first seting the `fut` shell environement varibale like so:
+
+```
+$ fut=./vend2.js mocha
+```
+which will execute the mocha test within an evnvironment that has `fut` specified.
+
+we could also do `$ export fut=./vend2.js` then all subsequent `$ mocha` calls would run with that variable set, until the end of the shell session
 
 ## Specification
 
@@ -62,5 +72,20 @@ Feature: Vending Machine
     And I supply the correct money
     Then Machine should vend item 
     And Machine should not return change
+    
+    When I request an invalid Item
+    And I supply any money
+    Then Machine should vend undefined / nothing 
+    And Machine should return all money
+    
+    When I request a valid Item
+    And I supply the too much money
+    Then Machine should vend item 
+    And Machine should return correct change
+    
+    When I request a valid Item
+    And I supply insufficient money
+    Then Machine should vend undefined / nothing 
+    And Machine should return all money
 ```
 
