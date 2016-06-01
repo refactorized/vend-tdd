@@ -1,4 +1,6 @@
-var vending = require('./vend-test.js');
+var fut = process.env.fut || './vend-test.js';
+console.log('testing: ' + fut);
+var vending = require(fut);
 var assert = require('chai').assert;
 var mocha = require('mocha');
 
