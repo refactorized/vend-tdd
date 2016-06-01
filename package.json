@@ -1,0 +1,29 @@
+{
+  "name": "vend-tdd",
+  "version": "0.0.1",
+  "description": "vending ftw",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/refactorized/vend-tdd.git"
+  },
+  "keywords": [
+    "devschool",
+    "dotrocks"
+  ],
+  "author": "adam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/refactorized/vend-tdd/issues"
+  },
+  "homepage": "https://github.com/refactorized/vend-tdd#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "lodash": "^4.13.1",
+    "mocha": "^2.5.3",
+    "underscore": "^1.8.3"
+  }
+}
